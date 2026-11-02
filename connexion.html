@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connexion — entreprender.ga</title>
+<meta name="description" content="Connectez-vous à votre espace entrepreneur pour payer vos taxes et cotisations et retrouver vos reçus.">
+<meta name="theme-color" content="#2E68BE">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/pjs-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/connexion.js" defer></script>
+</head>
+<body class="auth-page">
+
+<div class="auth-layout">
+
+  <!-- ===== Panneau de marque ===== -->
+  <aside class="auth-aside">
+    <div class="blue-bg" aria-hidden="true">
+      <span class="blue-bg__c1"></span>
+      <span class="blue-bg__c2"></span>
+      <span class="blue-bg__c3"></span>
+      <svg class="blue-bg__ribbon" viewBox="0 0 700 900" preserveAspectRatio="none"><path d="M-30 760 C 160 690, 300 820, 470 720 S 640 560, 740 600" fill="none" stroke="#FFCD04" stroke-width="12" stroke-linecap="round"/><path d="M-30 790 C 170 720, 310 850, 480 750 S 650 590, 740 630" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/></svg>
+      <img class="watermark blue-bg__mark" src="assets/img/e-blanc.png" alt="">
+    </div>
+
+    <a class="auth-aside__logo" href="index.html" aria-label="entreprender.ga, retour à l’accueil">
+      <img src="assets/img/logo-blanc.png" alt="entreprender.ga" width="198" height="36">
+    </a>
+
+    <div class="auth-aside__copy">
+      <span class="badge"><span class="badge__flag" aria-hidden="true"><span></span><span></span><span></span></span>Le guichet en ligne des entrepreneurs</span>
+      <p class="hero-title">Votre entreprise en règle, <span class="hero-title__swash">en un clic.<svg aria-hidden="true" viewBox="0 0 300 24" preserveAspectRatio="none"><path d="M4 18 C 90 2, 200 4, 296 12" fill="none" stroke="#FFCD04" stroke-width="7" stroke-linecap="round"/></svg></span></p>
+      <p class="hero-lead">Taxes, cotisations et reçus, depuis votre téléphone.</p>
+      <ul class="auth-perks">
+        <li><span class="auth-perks__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFCD04" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg></span>Payez vos taxes et cotisations en ligne</li>
+        <li><span class="auth-perks__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFCD04" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg></span>Suivez vos échéances au même endroit</li>
+        <li><span class="auth-perks__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFCD04" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.5h8.5l4.5 4.5v14.5H6z"/><path d="m9.5 14.5 2 2 3.5-4"/></svg></span>Téléchargez vos reçus officiels</li>
+      </ul>
+    </div>
+
+    <span class="auth-aside__foot">© <span data-year>2026</span> entreprender.ga</span>
+  </aside>
+
+  <!-- ===== Formulaires ===== -->
+  <main class="auth-main">
+    <img class="watermark auth-main__mark" src="assets/img/e-bleu.png" alt="" aria-hidden="true">
+
+    <a class="back-link" href="index.html">
+      <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m11 6-6 6 6 6"/></svg>
+      Retour à l’accueil
+    </a>
+
+    <div class="auth-wrap">
+      <span class="auth-wrap__square" aria-hidden="true"></span>
+      <span class="auth-wrap__dot" aria-hidden="true"></span>
+
+      <!-- ---------- Connexion ---------- -->
+      <form class="auth-card" id="view-connexion" data-view="connexion" data-auth="login" novalidate aria-labelledby="login-title">
+        <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="auth-card__head">
+          <span class="auth-card__mark" aria-hidden="true"><img src="assets/img/e-couleur.png" alt=""></span>
+          <div class="auth-card__titles">
+            <h1 class="auth-card__title" id="login-title">Espace entrepreneur</h1>
+            <p class="auth-card__sub">Connectez-vous à votre compte.</p>
+          </div>
+        </div>
+        <div class="auth-card__body">
+          <div class="segmented" role="group" aria-label="Se connecter avec" data-id-switch>
+            <button type="button" class="segmented__btn" aria-pressed="true" data-mode="email">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>E-mail
+            </button>
+            <button type="button" class="segmented__btn" aria-pressed="false" data-mode="phone">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>Téléphone
+            </button>
+          </div>
+
+          <div class="field" data-field="identifier">
+            <label class="field__label" for="login-id" data-id-label>Adresse e-mail</label>
+            <div class="field__control">
+              <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2E68BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+              <input id="login-id" name="identifier" type="email" autocomplete="username" placeholder="nom@entreprise.ga" required aria-describedby="login-id-error">
+            </div>
+            <p class="field__error" id="login-id-error" hidden></p>
+          </div>
+
+          <div class="field" data-field="password">
+            <div class="field__row">
+              <label class="field__label" for="login-pw">Mot de passe</label>
+              <a class="field__link" href="#mot-de-passe-oublie">Mot de passe oublié ?</a>
+            </div>
+            <div class="field__control field__control--pw">
+              <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2E68BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+              <input id="login-pw" name="password" type="password" autocomplete="current-password" placeholder="Votre mot de passe" required aria-describedby="login-pw-error">
+              <button type="button" class="icon-btn" data-toggle-password aria-label="Afficher le mot de passe" aria-controls="login-pw">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A5672" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <p class="field__error" id="login-pw-error" hidden></p>
+          </div>
+
+          <p class="form-status" role="status" data-status hidden></p>
+
+          <button type="submit" class="btn btn-primary btn-submit">
+            <span data-submit-label>Se connecter</span>
+            <span class="btn-submit__arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E2A5C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+          </button>
+
+          <p class="auth-card__foot">Pas encore inscrit ? <a href="#inscription">Créer un compte</a></p>
+        </div>
+      </form>
+
+      <!-- ---------- Inscription ---------- -->
+      <form class="auth-card" id="view-inscription" data-view="inscription" data-auth="register" novalidate aria-labelledby="register-title" hidden>
+        <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="auth-card__head">
+          <span class="auth-card__mark" aria-hidden="true"><img src="assets/img/e-couleur.png" alt=""></span>
+          <div class="auth-card__titles">
+            <h1 class="auth-card__title" id="register-title">Créer mon compte</h1>
+            <p class="auth-card__sub">Vous, puis votre entreprise.</p>
+          </div>
+        </div>
+        <div class="auth-card__body">
+          <div class="field-grid">
+            <div class="field" data-field="firstName">
+              <label class="field__label" for="reg-first">Prénom</label>
+              <div class="field__control"><input id="reg-first" name="firstName" autocomplete="given-name" required aria-describedby="reg-first-error"></div>
+              <p class="field__error" id="reg-first-error" hidden></p>
+            </div>
+            <div class="field" data-field="lastName">
+              <label class="field__label" for="reg-last">Nom</label>
+              <div class="field__control"><input id="reg-last" name="lastName" autocomplete="family-name" required aria-describedby="reg-last-error"></div>
+              <p class="field__error" id="reg-last-error" hidden></p>
+            </div>
+          </div>
+
+          <div class="field" data-field="identifier">
+            <label class="field__label" for="reg-id">E-mail ou téléphone</label>
+            <div class="field__control">
+              <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2E68BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+              <input id="reg-id" name="identifier" autocomplete="username" placeholder="nom@entreprise.ga ou +241…" required aria-describedby="reg-id-error">
+            </div>
+            <p class="field__error" id="reg-id-error" hidden></p>
+          </div>
+
+          <div class="field" data-field="password">
+            <label class="field__label" for="reg-pw">Mot de passe</label>
+            <div class="field__control field__control--pw">
+              <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2E68BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+              <input id="reg-pw" name="password" type="password" autocomplete="new-password" placeholder="8 caractères minimum" required minlength="8" aria-describedby="reg-pw-error">
+              <button type="button" class="icon-btn" data-toggle-password aria-label="Afficher le mot de passe" aria-controls="reg-pw">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A5672" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <p class="field__error" id="reg-pw-error" hidden></p>
+          </div>
+
+          <div class="field" data-field="company">
+            <label class="field__label" for="reg-company">Raison sociale</label>
+            <div class="field__control"><input id="reg-company" name="company" autocomplete="organization" required aria-describedby="reg-company-error"></div>
+            <p class="field__error" id="reg-company-error" hidden></p>
+          </div>
+
+          <div class="field-grid">
+            <div class="field" data-field="nif">
+              <label class="field__label" for="reg-nif">NIF</label>
+              <div class="field__control"><input id="reg-nif" name="nif" required aria-describedby="reg-nif-error"></div>
+              <p class="field__error" id="reg-nif-error" hidden></p>
+            </div>
+            <div class="field" data-field="rccm">
+              <label class="field__label" for="reg-rccm">RCCM</label>
+              <div class="field__control"><input id="reg-rccm" name="rccm" required aria-describedby="reg-rccm-error"></div>
+              <p class="field__error" id="reg-rccm-error" hidden></p>
+            </div>
+          </div>
+
+          <div class="field" data-field="terms">
+            <label class="check"><input type="checkbox" name="terms" required aria-describedby="reg-terms-error">J’accepte les conditions d’utilisation et la politique de confidentialité.</label>
+            <p class="field__error" id="reg-terms-error" hidden></p>
+          </div>
+
+          <p class="form-status" role="status" data-status hidden></p>
+
+          <button type="submit" class="btn btn-primary btn-submit">
+            <span data-submit-label>Créer mon compte</span>
+            <span class="btn-submit__arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E2A5C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+          </button>
+
+          <p class="auth-card__foot">Déjà inscrit ? <a href="#connexion">Se connecter</a></p>
+        </div>
+      </form>
+
+      <!-- ---------- Mot de passe oublié ---------- -->
+      <form class="auth-card" id="view-mot-de-passe-oublie" data-view="mot-de-passe-oublie" data-auth="reset" novalidate aria-labelledby="reset-title" hidden>
+        <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="auth-card__head">
+          <span class="auth-card__mark" aria-hidden="true"><img src="assets/img/e-couleur.png" alt=""></span>
+          <div class="auth-card__titles">
+            <h1 class="auth-card__title" id="reset-title">Mot de passe oublié</h1>
+            <p class="auth-card__sub">Recevez un lien pour le réinitialiser.</p>
+          </div>
+        </div>
+        <div class="auth-card__body">
+          <div class="field" data-field="identifier">
+            <label class="field__label" for="reset-id">E-mail ou téléphone du compte</label>
+            <div class="field__control">
+              <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2E68BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+              <input id="reset-id" name="identifier" autocomplete="username" placeholder="nom@entreprise.ga ou +241…" required aria-describedby="reset-id-error">
+            </div>
+            <p class="field__error" id="reset-id-error" hidden></p>
+          </div>
+
+          <p class="form-status" role="status" data-status hidden></p>
+
+          <button type="submit" class="btn btn-primary btn-submit">
+            <span data-submit-label>Envoyer le lien</span>
+            <span class="btn-submit__arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E2A5C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+          </button>
+
+          <p class="auth-card__foot"><a href="#connexion">Retour à la connexion</a></p>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
